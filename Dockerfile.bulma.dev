@@ -1,0 +1,13 @@
+FROM node
+
+RUN mkdir -p /usr/src/app
+
+WORKDIR /usr/src/app
+
+# get the deps in a separate step for image layer caching
+COPY . ./
+
+USER node
+
+CMD npm install --unsafe-perm && npm start
+

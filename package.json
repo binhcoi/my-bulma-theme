@@ -1,0 +1,21 @@
+{
+  "name": "bulma",
+  "version": "1.0.0",
+  "description": "bulma app",
+  "main": "index.js",
+  "scripts": {
+    "css-build": "sass sass/bulma.scss html/css/bulma.css --style compressed",
+    "css-watch": "npm run css-build -- -w",
+    "start": "node server.js & npm run css-watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "@creativebulma/bulma-collapsible": "^1.0.4",
+    "node-static": "^0.7.11"
+  }
+}
